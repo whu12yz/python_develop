@@ -1,4 +1,4 @@
 # python_develop
-some  projects developed with python
-I will continue to upload some projects in the future.
+we can use these source code to update our terminal.
+we should input the number of the terminal,ip address and the file to upload.
 continuous updating...
