@@ -23,31 +23,12 @@ def allupdate(ip, sendFilename):
             tn.write(command.encode('ascii')+b'\r\n')
         info = tn.read_all()
         print(info)
-        # tn.read_until('#'.encode())      # 重启
-        # tn.write('reboot'.encode('ascii') + b'\r\n')
 
         tn.read_until('#'.encode())
-        tn.close()              #关闭连接
+        tn.close()              # 关闭连接
     except:
         print('%s telnet连接失败...'% ip)
-if __name__ == '__main__':
+if __name__ == '__main__':      # 调试使用
     ip = '172.16.48.88'
     sendFilename = 'h900.bin.gz'
     allupdate(ip, sendFilename)
-
-
-# info=tn.read_very_lazy()
-# tn.write('she')
-    # fileinfo = tn.read_until('#'.encode())
-    # tn.write(('cat mtcfg.ini').encode() + b'\r\n')
-    # print(fileinfo)
-
-
-    # tn.read_until('y/n'.encode())      #grab shell
-    # tn.write('y'.encode() + b'\r\n')
-    #
-    # tn.read_until(finish2.encode())        #检测到#就输入命令
-    # tn.write('cd ramdisk'.encode() + b'\r\n')
-    #
-    # tn.read_until(finish2.encode())         #打开上传文档
-    # tn.write('cat mtcfg.ini'.encode() + b'\r\n')
