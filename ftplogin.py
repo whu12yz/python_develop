@@ -51,7 +51,7 @@ def getfile(ip, cwd, filename, path):                    # ftp下载文件，从
         print('%s下载文件失败...' % ip)
 
 
-def sendfile(ip,cwd, sendFilename, path):              #上传文件
+def sendfile(ip,cwd, sendFilename, path):              # 上传文件
     try:
         ftp = FTP()
         timeout = 10
@@ -73,7 +73,7 @@ def sendfile(ip,cwd, sendFilename, path):              #上传文件
         print('%s连接超时...'% ip)
 
 
-def mainfunc(ip, cwdsend, sendFilename, path):                          #调用上传文件、升级函数
+def mainfunc(ip, cwdsend, sendFilename, path):                          # 调用上传文件、升级函数
 
     sendfile(ip, cwdsend, sendFilename, path)
     getfilename(ip, cwdsend)
@@ -97,16 +97,3 @@ if __name__ == '__main__':
 
 
 
-    # t1 = threading.Thread(target=mainfunc, args=(ip1, cwdsend, sendFilename1, path))
-    # t2 = threading.Thread(target=mainfunc, args=(ip2, cwdsend, sendFilename2, path))
-    # threads.append(t1)
-    # threads.append(t2)
-    # for t in threads:
-    #     t.start()
-    # t.join()
-
-
-
-    # sendfile(ip, cwdsend, sendFilename, path)
-    # getfilename(ip, cwdsend)
-    # telnet_login.allupdate()
